@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHENOVA - డాక్టర్ ప్రిపరేషన్</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="navbar">
+        <h2>SHENOVA</h2>
+        <div>
+            <a href="index.html">హోమ్</a>
+            <a href="dashboard.html">డ్యాష్‌బోర్డ్</a>
+            <a href="doctor-prep.html">డాక్టర్ ప్రిపరేషన్</a>
+            <a href="education.html">అవగాహన హబ్</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="card" style="margin-top: 30px;">
+            <h3>మీ వైద్య సంప్రదింపు నివేదిక (Doctor Consultation Brief)</h3>
+            <p>గత నెలలో మీరు నమోదు చేసిన వివరాల ఆధారంగా డాక్టర్‌కు చూపించడానికి ఒక సులభమైన సారాంశాన్ని ఇక్కడ పొందవచ్చు.</p>
+            <br>
+            <button class="btn" onclick="generateReport()">రిపోర్ట్ సిద్ధం చేయి (Generate Report)</button>
+            
+            <div id="reportOutput" style="margin-top: 30px; padding: 20px; border-left: 5px solid #4A7C59; background-color: #f0f7f2; display: none;">
+                <h4 style="color: #4A7C59; margin-top: 0;">SHENOVA ఆరోగ్య సారాంశ నివేదిక (Patient Summary)</h4>
+                <p><strong>తేదీ:</strong> <span id="reportDate"></span></p>
+                <p><strong>గమనించిన ముఖ్య లక్షణాలు:</strong> గత 30 రోజుల్లో పీరియడ్స్ క్రమం తప్పడం, అలసట మరియు హార్మోనల్ హెచ్చుతగ్గుల లక్షణాలు నమోదు చేయబడ్డాయి.</p>
+                <p style="color: #666; font-size: 14px;">*గమనిక: ఈ నివేదిక మీ అవగాహన మరియు డాక్టర్ సంప్రదింపుల సౌలభ్యం కొరకు మాత్రమే. దీనిని అధికారిక వైద్య నిర్ధారణగా భావించరాదు.</p>
+                <br>
+                <button class="btn" onclick="window.print()">ప్రింట్ తీసుకోండి / PDF గా సేవ్ చేయండి</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    function generateReport() {
+        document.getElementById('reportDate').innerText = new Date().toLocaleDateString('te-IN');
+        document.getElementById('reportOutput').style.display = 'block';
+    }
+    </script>
+</body>
+</html>

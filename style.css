@@ -1,0 +1,52 @@
+:root {
+    --primary-pink: #4A7C59;
+    --primary-lavendar: #386144;
+    --bg-cream: #F9F6F0;
+    --text-dark: #333333;
+    --white: #ffffff;
+}
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg-cream);
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-pink);
+    padding: 15px 30px;
+    color: var(--white);
+}
+.navbar a {
+    color: var(--white);
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 600;
+}
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+.card {
+    background-color: var(--white);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+.btn {
+    background-color: var(--primary-pink);
+    color: var(--white);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+.btn:hover {
+    background-color: var(--primary-lavendar);
+}

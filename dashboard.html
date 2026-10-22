@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHENOVA - డ్యాష్‌బోర్డ్</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="navbar">
+        <h2>SHENOVA</h2>
+        <div>
+            <a href="index.html">హోమ్</a>
+            <a href="dashboard.html">డ్యాష్‌బోర్డ్</a>
+            <a href="doctor-prep.html">డాక్టర్ ప్రిపరేషన్</a>
+            <a href="education.html">అవగాహన హబ్</a>
+        </div>
+    </div>
+
+    <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 30px;">
+        <!-- Symptom Tracker Card -->
+        <div class="card">
+            <h3>రోజువారీ లక్షణాల నమోదు (Symptom Journal)</h3>
+            <form>
+                <p>ఈరోజు మీలో గమనించిన లక్షణాలను టిక్ చేయండి:</p>
+                <input type="checkbox" id="symp1"> క్రమం తప్పిన పీరియడ్స్ (Irregular Periods)<br><br>
+                <input type="checkbox" id="symp2"> మొటిమలు / స్కిన్ మార్పులు (Acne)<br><br>
+                <input type="checkbox" id="symp3"> జుట్టు రాలడం / పలచబడటం (Hair Thinning)<br><br>
+                <input type="checkbox" id="symp4"> తీవ్రమైన అలసట (Fatigue)<br><br>
+                <button type="button" class="btn" onclick="alert('మీ వివరాలు సురక్షితంగా సేవ్ చేయబడ్డాయి!')">డేటాను నమోదు చేయి</button>
+            </form>
+        </div>
+
+        <!-- Bloom Journey Card -->
+        <div class="card" style="text-align: center;">
+            <h3>మీ బ్లూమ్ జర్నీ (Your Bloom Journey)</h3>
+            <div id="flowerState" style="font-size: 70px; margin: 20px 0;">🌱</div>
+            <p>ఈరోజు మీరు తీసుకున్న ఆరోగ్యకరమైన నిర్ణయాన్ని క్లిక్ చేసి మీ మొక్కను పెంచండి!</p>
+            <button class="btn" onclick="document.getElementById('flowerState').innerText='🌸'; alert('అద్భుతం! మీ సెల్ఫ్-కేర్ టాస్క్ పూర్తయింది.');">నేను ఈరోజు వాకింగ్ చేసాను</button>
+        </div>
+    </div>
+
+</body>
+</html>
